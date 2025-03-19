@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="handleClick" id="btn-click">Click me</button>
+
+    <script>
+        function handleClick(){
+            alert("Clicked")
+        }
+
+        const btnElement = document.querySelector("#btn-click-1");
+        const btnElement2 = document.querySelector("#btn-click-2");
+        const inputElement = document.querySelector("#email")
+
+
+        // Lắng nghe sự kiện (Cách 2)
+        btnElement.onclick = function(){
+            alert("Button clicked 1")
+        }
+
+        // Lắng nghe sự kiện (Cách 3)
+        btnElement.addEventListener("dblclick", function () {
+            alert("Button clicked 2")
+        } );
+
+        // Lắng nghe sự kiện và lấy giá trị trong input
+        inputElement.addEventListener("input", function(event){
+            console.log("input changed");
+            
+        })
+    </script>
+</body>
+</html>
